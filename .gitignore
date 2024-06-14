@@ -27,6 +27,7 @@ captures/
 *.keystore
 gen-external-apklibs
 .externalNativeBuild
+.editorconfig
 obj/
 *.iml
 *.iws
@@ -62,3 +63,4 @@ deploymentTargetDropDown.xml
 render.experimental.xml
 google-services.json
 *.hprof
+!/.editorconfig

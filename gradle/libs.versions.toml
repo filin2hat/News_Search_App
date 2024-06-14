@@ -1,16 +1,16 @@
 [versions]
 agp = "8.5.0"
-kotlin = "2.0.0"
-ksp = "2.0.0-1.0.21"
+kotlin = "1.9.24"
+ksp = "1.9.24-1.0.20"
 coreKtx = "1.13.1"
 annotation = "1.8.0"
 kotlinxCoroutines = "1.9.0-RC"
-androidx-lifecycle = "2.8.1"
+androidx-lifecycle = "2.8.2"
 activityCompose = "1.9.0"
-composeBom = "2024.05.00"
+composeBom = "2024.06.00"
 retrofit = "2.11.0"
 room = "2.6.1"
-kotlin-serialization-json = "1.7.0"
+kotlin-serialization-json = "1.6.3"
 kotlinxSerializationConverter = "1.0.0"
 retrofitAdaptersResult = "1.0.10"
 junit = "4.13.2"
@@ -18,7 +18,8 @@ junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.7.0"
 material = "1.12.0"
-composeCompiler = "1.5.4"
+daggerHilt = "2.51.1"
+composeCompiler = "1.5.14"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,9 +43,13 @@ kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlin-serialization-json" }
 retrofit-adapters-result = { module = "com.github.skydoves:retrofit-adapters-result", version.ref = "retrofitAdaptersResult" }
 
-
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+dagger-main = { module = "com.google.dagger:dagger", version.ref = "daggerHilt" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerHilt" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt" }
 
 androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -63,3 +68,4 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
