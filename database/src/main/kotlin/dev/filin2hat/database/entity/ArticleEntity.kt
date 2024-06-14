@@ -8,7 +8,7 @@ import java.util.Date
 
 @Entity(tableName = "articles")
 class ArticleEntity(
-    @PrimaryKey(autoGenerate = true) val id: Long,
+    @PrimaryKey(autoGenerate = true) val id: Long?,
     @Embedded(prefix = "source_") val source: SourceEntity,
     @ColumnInfo(name = "author") val author: String,
     @ColumnInfo(name = "title") val title: String,
