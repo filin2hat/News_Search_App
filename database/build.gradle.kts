@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.dagger.hilt.android)
@@ -29,14 +30,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+    android {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
     }
 }
 
@@ -45,6 +42,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.compose.runtime)
 
     implementation(libs.dagger.main)
     ksp(libs.dagger.compiler)

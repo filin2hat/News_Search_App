@@ -1,7 +1,7 @@
 [versions]
 agp = "8.5.0"
-kotlin = "1.9.24"
-ksp = "1.9.24-1.0.20"
+kotlin = "2.0.0"
+ksp = "2.0.0-1.0.21"
 coreKtx = "1.13.1"
 annotation = "1.8.0"
 kotlinxCoroutines = "1.9.0-RC"
@@ -10,7 +10,7 @@ activityCompose = "1.9.0"
 composeBom = "2024.06.00"
 retrofit = "2.11.0"
 room = "2.6.1"
-kotlin-serialization-json = "1.6.3"
+kotlin-serialization-json = "1.7.0"
 kotlinxSerializationConverter = "1.0.0"
 retrofitAdaptersResult = "1.0.10"
 junit = "4.13.2"
@@ -19,13 +19,14 @@ espressoCore = "3.5.1"
 appcompat = "1.7.0"
 material = "1.12.0"
 daggerHilt = "2.51.1"
-composeCompiler = "1.5.14"
+composeRuntime = "1.7.0-beta03"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "composeRuntime" }
 
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
