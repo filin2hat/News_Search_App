@@ -11,10 +11,7 @@ class Article(
     val url: String,
     val urlToImage: String,
     val publishedAt: Date,
-    val content: String,
+    val content: String
 )
 
-class Source(
-    val id: String,
-    val name: String,
-)
+class Source(val id: String, val name: String)

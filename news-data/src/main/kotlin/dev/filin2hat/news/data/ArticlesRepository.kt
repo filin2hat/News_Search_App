@@ -24,10 +24,7 @@ import kotlinx.coroutines.flow.onEach
  * @param dataBase локальная база данных
  * @param api API для получения данных от удаленного сервера
  */
-class ArticlesRepository(
-    private val dataBase: NewsDataBase,
-    private val api: NewsApi,
-) {
+class ArticlesRepository(private val dataBase: NewsDataBase, private val api: NewsApi) {
     /**
      * Функция получения всех новостей. Возвращает flow с данными типа RequestResult<List<Article>>
      *
@@ -35,7 +32,7 @@ class ArticlesRepository(
      */
     @OptIn(ExperimentalCoroutinesApi::class)
     fun getAllArticles(
-        mergeStrategy: MergeStrategy<RequestResult<List<Article>>> = RequestResultMergeStrategy(),
+        mergeStrategy: MergeStrategy<RequestResult<List<Article>>> = RequestResultMergeStrategy()
     ): Flow<RequestResult<List<Article>>> {
         val cachedArticles: Flow<RequestResult<List<Article>>> =
             getAllFromDataBase()
