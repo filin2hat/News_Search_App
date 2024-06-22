@@ -8,6 +8,7 @@ import dev.filin2hat.news.data.models.Article
 import dev.filin2hat.newsapi.NewsApi
 import dev.filin2hat.newsapi.dto.ArticleDto
 import dev.filin2hat.newsapi.dto.ResponseDto
+import jakarta.inject.Inject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
@@ -24,7 +25,10 @@ import kotlinx.coroutines.flow.onEach
  * @param dataBase локальная база данных
  * @param api API для получения данных от удаленного сервера
  */
-class ArticlesRepository(private val dataBase: NewsDataBase, private val api: NewsApi) {
+class ArticlesRepository @Inject constructor(
+    private val dataBase: NewsDataBase,
+    private val api: NewsApi
+) {
     /**
      * Функция получения всех новостей. Возвращает flow с данными типа RequestResult<List<Article>>
      *

@@ -4,6 +4,7 @@ package dev.filin2hat.news.data
  * Generic-класс для получения результатов запросов
  */
 sealed class RequestResult<out E : Any>(open val data: E? = null) {
+
     class InProgress<E : Any>(data: E? = null) : RequestResult<E>(data)
 
     class Success<E : Any>(override val data: E) : RequestResult<E>(data)

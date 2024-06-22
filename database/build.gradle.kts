@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.dagger.hilt.android)
+//    alias(libs.plugins.dagger.hilt.android)
 }
 
 android {
@@ -44,8 +44,8 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.compose.runtime)
 
-    implementation(libs.dagger.main)
-    ksp(libs.dagger.compiler)
-    implementation(libs.dagger.hilt.android)
-    ksp(libs.dagger.hilt.compiler)
+//    implementation(libs.dagger.main)
+//    ksp(libs.dagger.compiler)
+//    implementation(libs.dagger.hilt.android)
+//    ksp(libs.dagger.hilt.compiler)
 }

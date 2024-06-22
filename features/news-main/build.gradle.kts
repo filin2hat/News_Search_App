@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.dagger.main)
     ksp(libs.dagger.compiler)
     implementation(libs.dagger.hilt.android)
+    implementation(libs.jakarta.iinject.api)
     ksp(libs.dagger.hilt.compiler)
 
     implementation(platform(libs.androidx.compose.bom))

@@ -2,18 +2,23 @@ package dev.filin2hat.news.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.filin2hat.news.data.RequestResult
 import dev.filin2hat.news.main.models.ArticleUIModel
 import dev.filin2hat.news.main.usecase.GetAllArticlesUseCase
+import jakarta.inject.Provider
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import javax.inject.Inject
 
-internal class NewsMainViewModel(private val getAllArticlesUseCase: GetAllArticlesUseCase) :
-    ViewModel() {
+@HiltViewModel
+internal class NewsMainViewModel @Inject constructor(
+    getAllArticlesUseCase: Provider<GetAllArticlesUseCase>
+) : ViewModel() {
     private val state: StateFlow<State> =
-        getAllArticlesUseCase()
+        getAllArticlesUseCase.get().invoke()
             .map { it.toState() }
             .stateIn(viewModelScope, SharingStarted.Lazily, State.Empty)
 }

@@ -20,6 +20,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 daggerHilt = "2.51.1"
 composeRuntime = "1.7.0-beta03"
+jakartaIinject = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +52,7 @@ dagger-main = { module = "com.google.dagger:dagger", version.ref = "daggerHilt" 
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerHilt" }
 dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt" }
+jakarta-iinject-api = { module = "jakarta.inject:jakarta.inject-api", version.ref = "jakartaIinject" }
 
 androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

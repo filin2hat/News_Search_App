@@ -21,6 +21,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "NEWS_API_KEY", "\"\"")
+        buildConfigField("String", "NEWS_API_BASE_URL", "\"\"")
     }
 
     buildTypes {
@@ -44,6 +46,9 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    buildFeatures{
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -63,4 +68,9 @@ dependencies {
     ksp(libs.dagger.compiler)
     implementation(libs.dagger.hilt.android)
     ksp(libs.dagger.hilt.compiler)
+
+    implementation(project(":news-data"))
+    implementation(project(":database"))
+    implementation(project(":newsapi"))
+
 }
